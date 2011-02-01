@@ -9,8 +9,8 @@ Gem::Specification.new do |s|
   s.authors     = ["Javier Lafora", "Paco Guzmán"]
   s.email       = ["jlafora@aspgems.com", "fjguzman@aspgems.com"]
   s.homepage    = ""
-  s.summary     = %q{TODO: Write a gem summary}
-  s.description = %q{TODO: Write a gem description}
+  s.summary     = %q{Simple I18n for javascript}
+  s.description = %q{Simple I18n in javascript. Parse all your I18n .yml files into js files so you can use them very easily.}
 
   s.rubyforge_project = "javascript_i18n"
 
