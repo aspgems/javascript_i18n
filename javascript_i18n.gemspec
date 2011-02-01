@@ -6,8 +6,8 @@ Gem::Specification.new do |s|
   s.name        = "javascript_i18n"
   s.version     = JavascriptI18n::VERSION
   s.platform    = Gem::Platform::RUBY
-  s.authors     = ["Javier Lafora", "Paco Guzmán"]
-  s.email       = ["jlafora@aspgems.com", "fjguzman@aspgems.com"]
+  s.authors     = ["Javier Lafora", "Paco Guzmán", "Jakub Kuźma", "Rafał Cieślak"]
+  s.email       = ["jlafora@aspgems.com", "fjguzman@aspgems.com", "qoobaa@gmail.com"]
   s.homepage    = ""
   s.summary     = %q{Simple I18n for javascript}
   s.description = %q{Simple I18n in javascript. Parse all your I18n .yml files into js files so you can use them very easily.}
