@@ -28,14 +28,12 @@ In the future -we hope- there will be no need to specify git source or branch.
 You must have a typical I18n configuration in your project (in config/locales tree)
 
 Execute:
-
-rails g javascript_i18n
+	rails g javascript_i18n
 
 to install it
 
 Execute:
-
-rake js:i18n:build
+	rake js:i18n:build
 
 This will generate some js files under the public/javascript/i18n directory.
 
