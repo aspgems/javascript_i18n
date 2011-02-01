@@ -1,5 +1,8 @@
 = javascript_i18n
 
+This is a project forked from https://github.com/qoobaa/javascript_i18n
+which it seems to be no longer mantained
+
 Dead simple JavaScript i18n tool. It contains JavaScript builder to
 generate static files with translations in /public/javascripts/i18n
 directory. Each language is stored in separate file, so if we have
@@ -15,15 +18,29 @@ locale he uses.
 
 == Installation
 
-If you don't have the {Gemcutter sources}[http://gemcutter.org/pages/gem_docs] yet:
-  gem sources -a http://gemcutter.org
+Put in your Gemfile:
+	gem 'javascript_i18n', :git => 'git://github.com/aspgems/javascript_i18n.git', :branch => 'rails3'
 
-To install the gem type:
-  gem install javascript_i18n
+In the future -we hope- there will be no need to specify git source or branch.
 
 == Usage
 
-See homepage[http://jah.pl/projects/javascript-i18n.html] for details.
+You must have a typical I18n configuration in your project (in config/locales tree)
+
+Execute:
+
+rails g javascript_i18n
+
+to install it
+
+Execute:
+
+rake js:i18n:build
+
+This will generate some js files under the public/javascript/i18n directory.
+
+Please, remember to include them in your head section... just in case you want to use them, but you bet you want to!
+
 
 == Copyright
 
