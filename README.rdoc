@@ -10,15 +10,9 @@ locale he uses.
 
 == Installation
 
-If you don't have the {Gemcutter sources}[http://gemcutter.org/pages/gem_docs] yet:
-  gem sources -a http://gemcutter.org
-
-To install the gem type:
-  gem install javascript_i18n
-
-Or, if you are using bundler, you need to add in your Gemfile:
-
-gem 'javascript_i18n', :git => 'git://github.com/aspgems/javascript_i18n.git', :branch => 'rails3'
+If you are using rails 3 you are using bundler, so you need to add
+this line in your Gemfile:
+  gem 'javascript_i18n', :git => 'git://github.com/aspgems/javascript_i18n.git', :branch => 'rails3'
 
 After installing the gem you need to:
   rails g javascript_i18n:install
@@ -27,7 +21,6 @@ After installing the gem you need to:
 == Initializer
 
 And you have to add an initializer. It can be, for example, javascript_i18n.rb:
-
   JavascriptI18n.configuration do |config|
     config.root_path = RAILS_ROOT
     config.lib_dir = "public/javascripts/i18n"
@@ -38,7 +31,6 @@ And you have to add an initializer. It can be, for example, javascript_i18n.rb:
 == Include
 
 You need to include the file corresponding to the current locale. This is typically done adding this line to you layout:
-
   <%= javascript_include_tag "i18n/#{I18n.locale}" %>
 
 == Copyright
