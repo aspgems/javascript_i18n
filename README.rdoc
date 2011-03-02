@@ -8,11 +8,6 @@ the language he uses (10 times smaller than in Babilu). Because of
 that fact we don't need to set any cookies to tell the client which
 locale he uses.
 
-* homepage[http://jah.pl/projects/javascript-i18n.html]
-* gemcutter[http://gemcutter.org/gems/javascript_i18n]
-* repository[http://github.com/qoobaa/javascript_i18n]
-* {issue tracker}[http://github.com/qoobaa/javascript_i18n/issues]
-
 == Installation
 
 If you don't have the {Gemcutter sources}[http://gemcutter.org/pages/gem_docs] yet:
@@ -25,6 +20,8 @@ After installing the gem you need to:
   rails g javascript_i18n:install
   rake js:i18n:build
 
+== Initializer
+
 And you have to add an initializer. It can be, for example, javascript_i18n.rb:
 
   JavascriptI18n.configuration do |config|
@@ -34,6 +31,12 @@ And you have to add an initializer. It can be, for example, javascript_i18n.rb:
     config.output_style = :merged
   end
 
+== Include
+
+You need to include the file corresponding to the current locale. This is typically done adding this line to you layout:
+
+  <%= javascript_include_tag "i18n/#{I18n.locale}" %>
+
 == Copyright
 
-Copyright (c) 2009 Jakub Kuźma. See LICENSE for details.
+Copyright (c) 2011 ASPgems. See LICENSE for details.
