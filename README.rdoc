@@ -25,6 +25,15 @@ After installing the gem you need to:
   rails g javascript_i18n:install
   rake js:i18n:build
 
+And you have to add an initializer. It can be, for example, javascript_i18n.rb:
+
+  JavascriptI18n.configuration do |config|
+    config.root_path = RAILS_ROOT
+    config.lib_dir = "public/javascripts/i18n"
+    config.output_dir = "public/javascripts/i18n"
+    config.output_style = :merged
+  end
+
 == Copyright
 
 Copyright (c) 2009 Jakub Kuźma. See LICENSE for details.
