@@ -21,9 +21,9 @@ If you don't have the {Gemcutter sources}[http://gemcutter.org/pages/gem_docs] y
 To install the gem type:
   gem install javascript_i18n
 
-== Usage
-
-See homepage[http://jah.pl/projects/javascript-i18n.html] for details.
+After installing the gem you need to:
+  rails g javascript_i18n:install
+  rake js:i18n:build
 
 == Copyright
 
