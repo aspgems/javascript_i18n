@@ -1,8 +1,5 @@
 = javascript_i18n
 
-This is a project forked from https://github.com/qoobaa/javascript_i18n
-which it seems to be no longer mantained
-
 Dead simple JavaScript i18n tool. It contains JavaScript builder to
 generate static files with translations in /public/javascripts/i18n
 directory. Each language is stored in separate file, so if we have
@@ -11,35 +8,35 @@ the language he uses (10 times smaller than in Babilu). Because of
 that fact we don't need to set any cookies to tell the client which
 locale he uses.
 
-* homepage[http://jah.pl/projects/javascript-i18n.html]
-* gemcutter[http://gemcutter.org/gems/javascript_i18n]
-* repository[http://github.com/qoobaa/javascript_i18n]
-* {issue tracker}[http://github.com/qoobaa/javascript_i18n/issues]
-
 == Installation
 
-Put in your Gemfile:
-	gem 'javascript_i18n', :git => 'git://github.com/aspgems/javascript_i18n.git', :branch => 'rails3'
+If you don't have the {Gemcutter sources}[http://gemcutter.org/pages/gem_docs] yet:
+  gem sources -a http://gemcutter.org
 
-In the future -we hope- there will be no need to specify git source or branch.
+To install the gem type:
+  gem install javascript_i18n
 
-== Usage
+After installing the gem you need to:
+  rails g javascript_i18n:install
+  rake js:i18n:build
 
-You must have a typical I18n configuration in your project (in config/locales tree)
+== Initializer
 
-Execute:
-	rails g javascript_i18n
+And you have to add an initializer. It can be, for example, javascript_i18n.rb:
 
-to install it
+  JavascriptI18n.configuration do |config|
+    config.root_path = RAILS_ROOT
+    config.lib_dir = "public/javascripts/i18n"
+    config.output_dir = "public/javascripts/i18n"
+    config.output_style = :merged
+  end
 
-Execute:
-	rake js:i18n:build
+== Include
 
-This will generate some js files under the public/javascript/i18n directory.
+You need to include the file corresponding to the current locale. This is typically done adding this line to you layout:
 
-Please, remember to include them in your head section... just in case you want to use them, but you bet you want to!
-
+  <%= javascript_include_tag "i18n/#{I18n.locale}" %>
 
 == Copyright
 
-Copyright (c) 2009 Jakub Kuźma. See LICENSE for details.
+Copyright (c) 2011 ASPgems. See LICENSE for details.
